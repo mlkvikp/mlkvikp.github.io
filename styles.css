@@ -1,83 +1,29 @@
-/* Reset default styles and set a background color */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+/* ... Previous CSS code ... */
+
+/* Navigation bar styles */
+nav {
+    background: #007acc;
+    padding: 10px 0;
 }
 
-/* Style the header section */
-header {
-    background-color: #007acc;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-.header .profile img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 20px 0;
-}
-
-.header h1 {
-    font-size: 32px;
-}
-
-.header p {
-    font-size: 18px;
-}
-
-/* Style the sections */
-section {
-    background-color: #fff;
-    margin: 20px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    font-size: 24px;
-}
-
-section ul {
+.nav-links {
     list-style: none;
     padding: 0;
-}
-
-section li {
-    margin: 10px 0;
-}
-
-/* Style the skills list */
-.skills ul {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.skills li {
-    background-color: #007acc;
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
     color: #fff;
-    padding: 5px 10px;
-    border-radius: 20px;
-    margin: 5px;
-    font-size: 14px;
+    font-size: 16px;
+    transition: color 0.3s;
 }
 
-/* Add more custom styles as needed */
-
-/* Add media queries for responsive design */
-@media (max-width: 768px) {
-    header .profile img {
-        width: 100px;
-        height: 100px;
-    }
-    header h1 {
-        font-size: 24px;
-    }
-    header p {
-        font-size: 16px;
-    }
+.nav-links a:hover {
+    color: #fff; /* You can add a hover effect here */
 }
-
