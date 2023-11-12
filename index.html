@@ -11,20 +11,46 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="#about">About Me</a></li>
+                <li><a href="#research">Research Interests</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
             </ul>
         </nav>
         <div class="profile">
-            <img src="profile-picture.jpg" alt="Your Profile Picture">
+            <img src="photo.png" alt="Profile Picture">
             <h1>Peter Mlkvik</h1>
-            <p>Your Profession</p>
         </div>
+        <nav>
+            <ul class="nav-links">  
+                <li><a href="https://scholar.google.com/citations?user=ocxc78kAAAAJ&hl=en" target="_blank"><img src="assets/64px-Google_Scholar_logo.svg.png" alt="Icon" class="icon"></a></li>
+                <li><a href="https://twitter.com/petermlkvik" target="_blank"><img src="assets/Logo_of_Twitter.svg.png" alt="Icon" class="icon"></a></li>
+                <li><a href="https://github.com/mlkvikp" target="_blank"><img src="assets/Octicons-mark-github.svg.png" alt="Icon" class="icon"></a></li>
+                <li><a href="https://www.linkedin.com/in/peter-mlkvik/" target="_blank"><img src="assets/LinkedIn_icon.svg.png" alt="Icon" class="icon"></a></li>
+            </ul>
+        </nav>
     </header>
     <section id="about" class="about">
         <h2>About Me</h2>
-        <p>Hi, I'm Your Name. I'm a Profession with X years of experience in Y industry. I'm passionate about Z and have worked on projects such as A, B, and C.</p>
+        <p>I am a third-year PhD student in the Materials Theory group at ETH Z&uuml;rich working with Prof. Nicola Spaldin and Prof. Claude Ederer.</p>
+    </section>
+    <section id="research" class="research">
+        <h2>Research Interests</h2>
+        <p>Hello.</p>
+    </section>
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <h3>PhD Materials Theory</h3>
+                <p>ETH Z&uuml;rich, Switzerland</p>
+                <p>August 2021 - Present</p>
+            </li>
+            <li>
+                <h3>MSci Physics with Theoretical Physics</h3>
+                <p>Imperial College London, United Kingdom</p>
+                <p>Sep 2017 - June 2021</p>
+            </li>
+        </ul>
     </section>
     <section id="experience" class="experience">
         <h2>Experience</h2>
@@ -51,29 +77,21 @@
             </li>
         </ul>
     </section>
-    <section id="education" class="education">
-        <h2>Education</h2>
-        <ul>
-            <li>
-                <h3>Degree 1</h3>
-                <p>University Name 1</p>
-                <p>Date Range 1</p>
-            </li>
-            <li>
-                <h3>Degree 2</h3>
-                <p>University Name 2</p>
-                <p>Date Range 2</p>
-            </li>
-        </ul>
-    </section>
-    <section id="skills" class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Skill 1</li>
-            <li>Skill 2</li>
-            <li>Skill 3</li>
-            <li>Skill 4</li>
-        </ul>
-    </section>
+    <script>
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const sectionId = link.getAttribute('href');
+                const section = document.querySelector(sectionId);
+                const sectionTop = section.offsetTop;
+                window.scrollTo({
+                    top: sectionTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
