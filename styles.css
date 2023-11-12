@@ -106,9 +106,10 @@ nav {
 
 .icon {
     filter: grayscale(100%) brightness(100%);
+    -webkit-filter: grayscale(100%) brightness(100%);
     width: 40px;
     height: 40px;
-    opacity: 0.7
+    opacity: 0.7;
 }
 
 @media (max-width: 768px) {
