@@ -9,85 +9,138 @@
 </head>
 <body>
     <header>
-        <nav>
+        <div class="hero">
+            <img src="assets/DSC_7456_v2.jpg" alt="Profile Picture" class="profile-img">
+            <h1>Peter Mlkvik</h1>
+            <p>Final-year PhD student at ETH Zürich</p>
+            <div class="social-icons">
+                <a href="https://scholar.google.com/citations?user=ocxc78kAAAAJ&hl=en" target="_blank">
+                    <img src="assets/64px-Google_Scholar_logo.svg.png" alt="Icon" class="icon">
+                </a>
+                <a href="https://github.com/mlkvikp" target="_blank">
+                    <img src="assets/Octicons-mark-github.svg.png" alt="GitHub" class="icon">
+                </a>
+                <a href="https://linkedin.com/in/mlkvikp" target="_blank">
+                    <img src="assets/LinkedIn_icon.svg.png" alt="LinkedIn" class="icon">
+                </a>
+               </div>
+        </div>
+        <nav class="sticky-nav">
             <ul class="nav-links">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#research">Research Interests</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
-            </ul>
-        </nav>
-        <div class="profile">
-            <img src="assets/DSC_7456_v2.jpg" alt="Profile Picture">
-            <h1>Peter Mlkvik</h1>
-        </div>
-        <nav>
-            <ul class="nav-links">  
-                <li><a href="https://scholar.google.com/citations?user=ocxc78kAAAAJ&hl=en" target="_blank"><img src="assets/64px-Google_Scholar_logo.svg.png" alt="Icon" class="icon"></a></li>
-                <li><a href="https://twitter.com/petermlkvik" target="_blank"><img src="assets/Logo_of_Twitter.svg.png" alt="Icon" class="icon"></a></li>
-                <li><a href="https://github.com/mlkvikp" target="_blank"><img src="assets/Octicons-mark-github.svg.png" alt="Icon" class="icon"></a></li>
-                <li><a href="https://www.linkedin.com/in/peter-mlkvik/" target="_blank"><img src="assets/LinkedIn_icon.svg.png" alt="Icon" class="icon"></a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="assets/CV_mlkvikp.pdf" target="_blank">CV</a></li>
             </ul>
         </nav>
     </header>
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>I am a fourth-year PhD student in the <a href="https://theory.mat.ethz.ch/" target="_blank">Materials Theory group at ETH Z&uuml;rich</a>  working with Prof. Nicola A. Spaldin and Prof. Claude Ederer.</p>
-    </section>
-    <section id="research" class="research">
-        <h2>Research Interests</h2>
-        <p>I am intrigued by the interplay of electronic and structural degrees of freedom in materials of the future. In particular, I study metal-to-insulator transitions in correlated metal oxides such as VO<sub>2</sub>. These phenomena not only carry elusive physics but also the potential for future industrial use in modern technologies.</p>
-    </section>
-    <section id="education" class="education">
-        <h2>Education</h2>
-        <ul>
-            <li>
-                <h3>PhD Materials Theory</h3>
-                <p>ETH Z&uuml;rich, Switzerland</p>
-                <p>August 2021 - Present</p>
-            </li>
-            <li>
-                <h3>MSci Physics with Theoretical Physics</h3>
-                <p>Imperial College London, United Kingdom</p>
-                <p>Sep 2017 - June 2021</p>
-            </li>
-        </ul>
-    </section>
-    <section id="experience" class="experience">
-        <h2>Experience</h2>
-        <ul>
-            <li>
-                <h3>Scientific Assistant, Materials Theory</h3>
-                <p>ETH Z&uuml;rich, Switzerland</p>
-                <p>August 2021 - Present</p>
-            </li>
-            <li>
-                <h3>Research Assistant, Theory and Simulation of Materials</h3>
-                <p>Imperial College London, United Kingdom</p>
-                <p>June 2019 - September 2020</p>
-            </li>
-            <li>
-                <h3>Research Intern, GA Drilling</h3>
-                <p>Bratislava, Slovakia</p>
-                <p>June 2018 - September 2018</p>
-            </li>
-        </ul>
-    </section>
-    <script>
-        const navLinks = document.querySelectorAll('.nav-links a');
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', e => {
-                e.preventDefault();
-                const sectionId = link.getAttribute('href');
-                const section = document.querySelector(sectionId);
-                const sectionTop = section.offsetTop;
-                window.scrollTo({
-                    top: sectionTop,
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <main>
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>I am a final-year PhD student in the <a href="https://theory.mat.ethz.ch/" target="_blank">Materials Theory group at ETH Zürich</a>, working with Prof. Nicola A. Spaldin and Prof. Claude Ederer. My research focuses on electronic phase transitions in correlated materials, combining condensed matter theory, materials science, and high-performance computing.
+                <br> I enjoy solving complex problems through simulation and data, and I’m looking to apply these skills in data-driven or computational roles in industry.</p>
+        </section>
+
+        <section id="research" class="research">
+            <h2>Research Interests</h2>
+            <p>I study metal-to-insulator transitions in correlated metal oxides such as vanadium dioxide, VO<sub>2</sub>. These materials exhibit rich electronic behavior and pose fundamental questions in condensed matter physics, with promising applications in low-power electronics and neuromorphic computing.</p>
+        </section>
+
+        <section id="education" class="education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <h3>PhD in Materials Theory</h3>
+                    <p>ETH Zürich, Switzerland</p>
+                    <p>Aug 2021 – Expected Dec 2025</p>
+                    <ul>
+                        <li>Thesis: <em>Tuning the Metal-Insulator Transition in VO₂ and Related Oxides</em></li>
+                        <li>First-principles simulations and HPC to study and engineer correlated materials</li>
+                        <li>Relevant coursework: Machine Learning, Big Data, Probabilistic AI</li>
+                      </ul>
+                </li>
+                <li>
+                    <h3>MSci Physics with Theoretical Physics</h3>
+                    <p>Imperial College London, UK</p>
+                    <p>Sep 2017 – Jun 2021</p>
+                    <ul>
+                        <li>Thesis: <em>B-anomalies at LHCb via the B<sub>s</sub> → φ<sub>3</sub> τ<sup>+</sup> τ<sup>−</sup> decay</em> using boosted decision trees on CERN data</li>
+                        <li>Graduated with First-Class Honours; Dean’s List (Top 10%)</li>
+                        <li>Relevant coursework: Computational Physics, Statistical Mechanics, Complexity & Networks</li>
+                      </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="experience" class="experience">
+            <h2>Experience</h2>
+            <ul>
+                <li>
+                  <h3>Scientific Assistant, Materials Theory</h3>
+                  <p><strong>ETH Zürich, Switzerland</strong></p>
+                  <p>Aug 2021 – Present</p>
+                  <ul>
+                    <li>Taught and coordinated Bachelor’s and Master’s level courses with 50+ students</li>
+                    <li>Supervised two Master’s projects and one Master’s thesis</li>
+                    <li>Maintained internal infrastructure (GitLab, software compilation on HPC clusters, tech support)</li>
+                  </ul>
+                </li>
+                <li>
+                  <h3>Research Assistant, Theory and Simulation of Materials</h3>
+                  <p><strong>Imperial College London, UK</strong></p>
+                  <p>Jun 2019 – Sep 2020</p>
+                  <ul>
+                    <li>Performed large-scale quantum-mechanical simulations of magnetic effects in superalloys</li>
+                    <li>Worked on HPC infrastructure with custom scripts and automation</li>
+                    <li>Awarded the Faculty of Engineering UROP Award and the Henry Royce Institute UROP Award</li>
+                  </ul>
+                </li>
+                <li>
+                  <h3>Research Intern</h3>
+                  <p><strong>GA Drilling, Bratislava, Slovakia</strong></p>
+                  <p>Jun 2018 – Sep 2018</p>
+                  <ul>
+                    <li>Contributed to feasibility analysis of a novel plasma-drilling concept (later implemented)</li>
+                  </ul>
+                </li>
+              </ul>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>R</li>
+                <li>High-Performance Computing</li>
+                <li>Linux / Bash</li>
+                <li>Git / GitLab</li>
+                <li>SLURM</li>
+                <li>DFT / Ab-initio Methods</li>
+                <li>Data Analysis</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Selected Projects</h2>
+            <ul>
+                <li>
+                    <h3>Large-scale DFT simulations of VO<sub>2</sub></h3>
+                    <p>Set up and automated high-throughput DFT workflows on HPC clusters to study electronic phase transitions.</p>
+                </li>
+                <li>
+                    <h3>Statistical analysis of correlated materials data</h3>
+                    <p>Used R and Python to analyze and visualize large datasets from simulations; developed scripts for reproducible results.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p style="text-align: center; padding: 20px; color: #aaa;">&copy; 2025 Peter Mlkvik</p>
+    </footer>
 </body>
 </html>

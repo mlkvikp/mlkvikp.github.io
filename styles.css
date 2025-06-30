@@ -1,148 +1,189 @@
-/* Reset default styles and set a background color */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    background: #f9f9f9;
+    margin: 0;
     padding: 0;
-    background-color: #fff;
-    font-family: "Open Sans", sans-serif;
-}
-
-/* Global text styles */
-body, h1, h2, h3, p {
     color: #333;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.5;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
 }
 
-/* Header styles */
 header {
-    background: #839cad;
+    background: #1a1a1a;
     color: #fff;
     text-align: center;
-    padding: 40px;
+    padding: 40px 20px;
 }
 
-.profile img {
-    width: 150px;
-    height: 150px;
+.profile-img {
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     margin: 20px 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     object-fit: cover;
-    object-position: center top;
+    object-position: top;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.header h1 {
+.hero h1 {
     font-size: 36px;
+    margin: 10px 0;
+    font-weight: 700;
 }
 
-.header p {
-    font-size: 20px;
+.hero p {
+    font-size: 18px;
+    color: #ccc;
 }
 
-/* Section styles */
+.sticky-nav {
+    background: #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    list-style: none;
+    margin: 0;
+    gap: 30px;
+}
+
+.nav-links li {
+    border: none; /* Remove any borders around list items */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+    border: none; /* Remove any borders around links */
+}
+
+.nav-links a:hover {
+    color: #839cad;
+    transform: translateY(-2px);
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    filter: grayscale(100%) brightness(90%);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    margin: 0 5px;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%) brightness(100%);
+}
+
+/* Social icons styles */
+.social-icons .icon {
+    margin: 0 10px; /* Increase spacing between icons */
+    border: none; /* Remove any borders around icons */
+    display: inline-block; /* Ensure icons are inline and not causing layout issues */
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+main {
+    padding: 40px 20px;
+}
+
 section {
-    margin-bottom: 50px;
-    margin: 20px auto;
-    padding: 30px;
-    border: none;
-    padding-top: 50px;
     max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-section h2 {
-    font-size: 28px;
-    color: #7eacca;
-    margin-bottom:20px;
-    height: 30px; 
-    line-height: 30px; /* Adjust the line-height */
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-section ul {
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+ul {
     list-style: none;
     padding: 0;
 }
 
-section li {
-    margin: 20px 0;
+li {
+    margin-bottom: 20px;
+    border-left: 4px solid #839cad;
+    padding-left: 12px;
+    color: #555;
 }
 
-/* Skills list styles */
 .skills ul {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .skills li {
     background: #839cad;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 16px;
     border-radius: 20px;
-    margin: 10px;
-    font-size: 18px;
-}
-
-/* Navigation bar styles */
-nav {
-    background: #839cad;
-    padding: 10px 0;
-}
-
-.nav-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.nav-links li {
-    margin: 0 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-    color: #fff; /* You can add a hover effect here */
-}
-
-.icon {
-    filter: grayscale(100%) brightness(100%);
-    -webkit-filter: grayscale(100%) brightness(100%);
-    width: 40px;
-    height: 40px;
-    opacity: 0.7;
-}
-
-@media (max-width: 768px) {
-    header {
-        height: 300px;
-    }
-    section {
-        max-width: 80%;
-    }
+    font-size: 15px;
 }
 
 a {
-    color: rgb(57, 57, 88); /* Default color for all links */
-    text-decoration: underline; /* Optional: Remove underline from links */
+    color: #3b3b8f;
+    text-decoration: underline;
 }
 
 a:hover {
-    color: rgb(88, 88, 150); /* Change color when hovered */
-    text-decoration: underline; /* Optional: Add underline on hover */
+    color: #5f5fb4;
 }
 
-a:visited {
-    color: purple; /* Change color after the link is visited */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
 }
 
-a:active {
-    color: rgb(164, 164, 179); /* Change color when the link is clicked */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 20px;
+    }
 }
