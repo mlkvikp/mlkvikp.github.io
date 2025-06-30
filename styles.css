@@ -121,16 +121,22 @@ h2 {
     color: #1a1a1a;
 }
 
+/* General list styling */
 ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
 }
 
 li {
     margin-bottom: 20px;
-    border-left: 4px solid #839cad;
-    padding-left: 12px;
-    color: #555;
+    padding-left: 20px; /* Add indentation */
+    color: #555; /* Keep text color subtle */
+}
+
+/* Nested lists styling */
+ul ul {
+    padding-left: 30px; /* Increase indentation for nested lists */
 }
 
 .skills ul {
